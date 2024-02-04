@@ -1,15 +1,15 @@
-# File Organizer
+# FilOr
 
 ## Funcionamento
 
-Utilizando uma janela de selecão de diretórios para que o usuário possa selecionar uma pasta par que os arquivos dela sejam organizados. O **_File Organizer_** utiliza sub pastas criadas para organizar cada tipo de arquivo usando como base o tipo de extenção do mesmo, um exemplo seria da pasta de planilhas que dentro teriam arquivos com as extenções xlsx, xls, xlsm, etc..., dessa forma o File Organizer consegue organizar pelo tipo e não por extenção do arquivo.
+Utilizando uma janela de selecão de diretórios para que o usuário possa selecionar uma pasta par que os arquivos dela sejam organizados. O **_FilOr_** utiliza sub pastas criadas para organizar cada tipo de arquivo usando como base o tipo de extenção do mesmo, um exemplo seria da pasta de planilhas que dentro teriam arquivos com as extenções xlsx, xls, xlsm, etc..., dessa forma o FilOr consegue organizar pelo tipo e não por extenção do arquivo.
 Ao final da execução do programa, ele abre um popup com uma menssagem dizendo "Todos os arquivos já foram organizado" e ao pressionar "Ok" ele o fecha. Se caso a janela de seleção de diretórios for fechada antes de selecionar algum, aparecerá um popup de aviso disendo "O sistema não pode encontrar o caminho especificado."
 
 ---
 
 ## Tecnologias usadas
 
-Basicamente o File Organizer foi feito com apenas as bibliotecas padrão do Python, sem a necessidade de instalar bibliotecas de terceiros. As bibliotecas usadas foram:
+Basicamente o FilOr foi feito com apenas as bibliotecas padrão do Python, sem a necessidade de instalar bibliotecas de terceiros. As bibliotecas usadas foram:
 
 - **Tkinter** -> O tkinter foi utilizado para a criação da janela de seleção de diretório e popups.
 
