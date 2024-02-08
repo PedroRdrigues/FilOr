@@ -11,7 +11,7 @@ Ao final da execução do programa, ele abre um popup com uma menssagem dizendo 
 
 Basicamente o FilOr foi feito com apenas as bibliotecas padrão do Python, sem a necessidade de instalar bibliotecas de terceiros. As bibliotecas usadas foram:
 
-- **Tkinter** -> O tkinter foi utilizado para a criação da janela de seleção de diretório e popups.
+- **Tkinter** -> O tkinter foi utilizado para a criação da janela de seleção de diretório usando a função **askdirectory()** e para fazer os popups com o módulo messagebox com as funções **showinfo()** para o popup de finalização e **showwarning()** para o popup de alerta.
 
 - **Os** -> A biblioteca "os" foi usada para identificar os arquivos dentro das pastas, separar o nome do arquivo da extenção dele, verificar a existencia de uma pasta que já pudesse ser utilizada para adicionar algum tipo de arquivo, criação de pastas não existentes para realizar a organização dos arquivos e reorganização de arquivos dentro de casa pasta especificada.
 
@@ -19,8 +19,18 @@ Basicamente o FilOr foi feito com apenas as bibliotecas padrão do Python, sem a
 
 ---
 
+## Arquivos
+
+- O arquivo *file_organizer.py* é um arquivo que guarda a função de organizar arquivos.
+- O arquivo _main.py_ é usado para a criação da GUI para a interação do usuário.
+
+---
+
 ## Futuras atualizações
 
-- [ ] Adicinar uma tela de loading para que fique claro ao usuário que o programa ainda está em execução.
-
-
+- [ ] Adicionar uma tela de loading para que fique claro ao usuário que o programa ainda está em execução.
+- [ ] Adicionar uma GUI para que o usuário possa interagir.
+- [ ] Adicionar funções de adicionar e deletar extenções.
+- [ ] Adicionar um BD para guardar as extenções já existentes e futuras.
+- [ ] Adicionar funçoes para salvar configurações pré definidas pelo usuário.
+- [ ] Adicionar função para criar apenas diretórios sem a necessidade de movimentar arquivos.
