@@ -1,38 +1,35 @@
-import os
-from tkinter.filedialog import askdirectory
-from tkinter import messagebox
-from time import sleep
+"""
+Inicio da criação da tela de Loading.
+"""
 
+from tkinter import *
+from tkinter import ttk
+from tkinter import font
 
-try:
-    path = askdirectory(title='Abrir Pasta')
+root = Tk()
 
-    path_list = os.listdir(path)
-
-    
-    locations = {
-        'imagens': ['.png','.jpeg','.jpg','.bmp'],
-        'planilhas': ['.xlsx','.xlsm','.xlsb','.sltx','.xltm','.xls','.csv'],
-        'documentos': ['.doc','.docx','.pdf','.txt'],
-        'compactados': ['.zip','.rar','.7z','.tar','.tar.gz'],
-        'executaveis': ['.exe','.bat','.msi'],
-        'audios': ['.mp3','.wav','.flac','.aac','.aiff'],
-        'videos': ['.avi','.wmv','.mov','.qt','.mk  v','.mp4'],
-    }
-
-
-    for file in path_list:
-        name, extensions = os.path.splitext(f'{path}/{file.lower()}')
+class App():
+    def __init__(self):
+        self.root = root
+        self.Loanding_window()
+        root.mainloop()
         
-        for folder in locations:
-            if extensions in locations[folder]:
-                if not os.path.exists(f'{path}/{folder}'):
-                    os.mkdir(f'{path}/{folder}')
-                    
-                os.rename(f'{path}/{file}', f'{path}/{folder}/{file.lower()}')
+        # self.lista_arquivos = len(lista_arquivos)
+        
+        
+    def Loanding_window(self):
+        self.root.title("FilOr")
+        self.root.geometry('400x150')
+        self.root.resizable(False,False)
+        
+        fnt = font.Font(size=16)
+        # self.texto = str(texto)
+        self.label = Label(root, text='Organizando arquivos...',font=fnt)
+        self.label1 = Label(root, text='|_______________________|',font=fnt) # Barra de loading
+        self.label.place(x=50,y=40)
+        self.label1.place(x=50,y=65)
+        
+    
 
-    sleep(1.5)
-    messagebox.showinfo('File Organizer','Todos os arquivos foram organizados.')
 
-except: 
-    messagebox.showwarning('File organizer','O sistema não pode encontarar o caminho especeficado')
+App()
