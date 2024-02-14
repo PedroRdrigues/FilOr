@@ -1,35 +1,37 @@
-"""
-Inicio da criação da tela de Loading.
-"""
-
 from tkinter import *
-from tkinter import ttk
-from tkinter import font
+from tkinter import Tk
 
 root = Tk()
 
+
 class App():
-    def __init__(self):
+    def __init__(self) -> None:
         self.root = root
-        self.Loanding_window()
+        self.window()
+        self.frames()
+        self.widgets_Lframe()
         root.mainloop()
-        
-        # self.lista_arquivos = len(lista_arquivos)
-        
-        
-    def Loanding_window(self):
-        self.root.title("FilOr")
-        self.root.geometry('400x150')
-        self.root.resizable(False,False)
-        
-        fnt = font.Font(size=16)
-        # self.texto = str(texto)
-        self.label = Label(root, text='Organizando arquivos...',font=fnt)
-        self.label1 = Label(root, text='|_______________________|',font=fnt) # Barra de loading
-        self.label.place(x=50,y=40)
-        self.label1.place(x=50,y=65)
-        
     
+    def window(self):
+        self.root.title('FilOr')
+        self.root.geometry('800x500')
+        self.root.configure(background='#131f38')
+        self.root.maxsize(950,650)
+        self.root.minsize(650,350)
+    
+    def frames(self):
+        self.Lframe = Frame(self.root, bd=4, bg='#dfe3ee',
+                            highlightbackground='#759de6', highlightthickness=1.8)
+        self.Lframe.place(relx=0.01,rely=0.01,relwidth=0.4,relheight=0.98)
+        
+        self.Rframe = Frame(self.root, bd=4, bg='#dfe3ee',
+                            highlightbackground='#759de6', highlightthickness=1.8)
+        self.Rframe.place(relx=0.414,rely=0.01,relwidth=0.576,relheight=0.98)
+    
+    def widgets_Lframe(self): ...
+
+
+
 
 
 App()
